@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>Purchase Orders</h2>
+    <table>
+        <tr>
+            <th>PO Number</th>
+            <th>Supplier</th>
+            <th>Description</th>
+        </tr>
+        {% for purchase_order in purchase_orders %}
+            <tr>
+                <td>{{ purchase_order.po_number }}</td>
+                <td>{{ purchase_order.supplier }}</td>
+                <td>{{ purchase_order.description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

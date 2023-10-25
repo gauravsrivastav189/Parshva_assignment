@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Your Docketing Tool</title>
+</head>
+<body>
+    <header>
+        <h1>Your Docketing Tool</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'purchase_order_list' %}">Purchase Orders</a></li>
+                <li><a href="{% url 'docket_form' %}">Docket Form</a></li>
+                <!-- Add links to other views as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+</body>
+</html>
